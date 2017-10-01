@@ -1,0 +1,38 @@
+import java.util.*;
+class compr
+{
+    public static void main()
+    {
+        Scanner in=new Scanner(System.in);
+        System.out.println("Enter sentence to compress");
+        
+        String S=in.next();
+       
+        String S3=S;
+        
+        short a[]=new short[S3.length()];
+        
+      
+        
+     
+        for(int x=0;S3.length()>x;x++)
+        {
+            
+                for(char check='A';check<='z';check++)
+                {
+                    if(S3.charAt(x)==check)
+                    {
+                        a[x]=(short)(S3.charAt(x)-65);
+                    }
+                   
+                }
+        }
+        
+        System.out.println("Your compressed file is coded ");
+     
+        for(int x=0;x<S3.length();x++)
+        {
+            System.out.print(a[x]+" ");
+        }
+        
+    }
